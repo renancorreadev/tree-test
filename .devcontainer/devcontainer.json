@@ -1,0 +1,70 @@
+{
+    "name": "Blockchain Development",
+    "image": "ghcr.io/trailofbits/eth-security-toolbox:nightly",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {
+        "version": "latest",
+        "ppa": true
+      },
+      "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": true,
+        "configureZshAsDefaultShell": true,
+        "installOhMyZsh": true
+      }
+    },
+    "postCreateCommand": "",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "juanblanco.solidity",
+          "tintinweb.solidity-visual-auditor",
+          "tintinweb.graphviz-interactive-preview",
+          "ms-vscode.hexeditor",
+          "trailofbits.slither-vscode",
+          "toohq.vscode-mythx-security",
+          "remixproject.ethereum-remix",
+          "github.vscode-pull-request-github",
+          "eamodio.gitlens",
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint"
+        ],
+        "settings": {
+          "editor.formatOnSave": true,
+          "editor.rulers": [80, 120],
+          "editor.tabSize": 2,
+          "editor.detectIndentation": false,
+          "files.trimTrailingWhitespace": true,
+          "solidity.formatter": "prettier",
+          "solidity.compileUsingRemoteVersion": "latest",
+          "solidity.defaultCompiler": "remote",
+          "solidity.packageDefaultDependenciesDirectory": "node_modules",
+          "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+          "solidity.validationDelay": 1500,
+          "solidity-va.tools.surya.enable": true,
+          "solidity-va.tools.surya.input.contracts.exclude": ["node_modules/**"],
+          "solidity-va.parser.parseImports": true,
+          "solidity-va.parser.parseNodes": true,
+          "solidity-va.security.enable": true,
+          "solidity-va.security.criticalityLevel": "warning",
+          "solidity-va.hover.enable": true,
+          "solidity.linter": "solhint",
+          "git.enableSmartCommit": true,
+          "git.autofetch": true,
+          "diffEditor.ignoreTrimWhitespace": false,
+          "files.autoSave": "onFocusChange",
+          "workbench.colorCustomizations": {
+            "editorWarning.foreground": "#ff8800",
+            "editorError.foreground": "#ff0000"
+          },
+          "editor.bracketPairColorization.enabled": true,
+          "editor.guides.bracketPairs": true,
+          "editor.suggestSelection": "first",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+          }
+        }
+      }
+    }
+  }
